@@ -158,5 +158,5 @@ player.moveHero(direction: .Right)
 player.showRoom()
 player.moveHero(direction: .Down)
 
-
+// 2
 
