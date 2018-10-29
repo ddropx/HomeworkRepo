@@ -1,6 +1,6 @@
 //: Playground - noun: a place where people can play
 
-import UIKit
+import Foundation
 
 // Задание - Создайте расширение для Int со свойствами isNegative, isPositive, которые должны возвращать Bool. Добавьте свойство, которое возвращает количество символов в числе. Добавьте метод, который возвращает символ числа по индексу. Добавить стрингу метод truncate, чтобы отрезал лишние символы и, если таковые были, заменял их на троеточие.
 
@@ -25,7 +25,6 @@ extension Int {
         return(self / symbol) % 10
     }
 }
-
 let a = 20
 a.checkForValid
 a.isNegative
@@ -58,3 +57,5 @@ extension String {
 let testString = "Skutarenko"
 testString[0..<8]
 testString.truncate(index: 7)
+
+// new changes included 1.0
