@@ -58,3 +58,5 @@ extension String {
 let testString = "Skutarenko"
 testString[0..<8]
 testString.truncate(index: 7)
+
+// new changes included 1.0
