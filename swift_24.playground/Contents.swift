@@ -25,7 +25,6 @@ extension Int {
         return(self / symbol) % 10
     }
 }
-
 let a = 20
 a.checkForValid
 a.isNegative
