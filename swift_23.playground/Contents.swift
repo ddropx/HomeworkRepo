@@ -43,29 +43,29 @@ class Oleg: Animal {
 func generate() -> (Male, [Human]) {
     let males = [Male(), Male(), Male(), Male(), Male()]
     let females = [Female(), Female(), Female(), Female(), Female(), Female()]
-    
+
     let human = males[4]
-    
+
     human.father = males[0]
     human.mother = females[0]
-    
+
     // add uncles and aunts to generation (father's & mother's)
-    
+
     human.mother?.brothers = [males[1], males[2], males[3]]
     human.mother?.sisters = [females[1]]
-    
+
     human.father?.sisters = [females[2], females[3], females[4]]
-    
+
     // add grandfather and grandmother
-    
+
     human.father?.father = males[4]
     human.mother?.mother = females[5]
-    
+
     // add pets
-    
+
     human.mother?.animals = [Oleg()]
     human.father?.animals = [Cat(), Cat()]
-    
+
     return (human, males as [Human] + females)
 }
 
@@ -91,7 +91,7 @@ for anyHumans in humans {
     if anyHumans.animals == nil {
         continue
     }
-    
+
     for animal in anyHumans.animals! {
         switch animal {
         case is Oleg: count.olegs += 1
@@ -104,3 +104,4 @@ for anyHumans in humans {
 }
 
 print(count)
+// check for changes
